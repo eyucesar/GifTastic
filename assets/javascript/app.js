@@ -8,7 +8,7 @@ $(document).ready(function() {
 		var emotion = $(this).attr("data-name");
 		//code that will add a random offset number to the url so that different gifs are displayed after each click to the same button.
 		var randomOffsetNum = Math.floor((Math.random() * 101));
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         emotion + "&api_key=dc6zaTOxFJmzC&limit=10&offset=" + randomOffsetNum;
         //making the Ajax call
         $.ajax({
