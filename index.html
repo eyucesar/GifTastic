@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>GifTastic</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+	<br>
+	
+	<div class="container">
+		<div class="row"><br>
+		  	<div class="col-md-12" id="button-space"></div>
+		</div><br>
+
+		<div class="row">
+			<div class="col-md-9" id="gif-space"><br><br><br>
+				<div id="opening-content"><iframe src="https://giphy.com/embed/OF0yOAufcWLfi" width="480" height="238" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/celebs-jimmy-fallon-OF0yOAufcWLfi"></a><br></p><br><br><p id="text">Click the above category buttons to see gifs related to your choice. If you want to add your own category, submit it on the right hand side. You can animate the gifs by clicking on them!</p></div><br><br>
+			</div>
+			<div class="col-md-3" id="submit"><br><br><br>
+				<form id="submit-form">
+      				<label for="category-input">Add a Category</label>
+      				<br><br><input type="text" id="category-input"><br>
+					<br><input id="add-category" type="submit" value="Submit">
+    			</form><br>
+    			<img id="giphy" src="assets/images/powered_by_giphy.png" alt="powered by giphy">
+    		</div>
+		</div><br>
+	</div>
+		
+		<div class="row">
+		  	<div class="col-md-12" id="footer">
+				<br><footer>&copy;2017 Ebru Yucesar</footer>
+			</div>
+		</div>
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
