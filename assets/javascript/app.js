@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	//array for the buttons
 	var emotions = ["Frustrated", "Joyful", "Grumpy", "Puzzled", "Hangry", "Discouraged", "Outraged", "Disappointed", "Jealous", "Shocked", "Relaxed", "Embarassed", "Heartbroken", "Vulnerable", "Obsessed", "Lazy", "Pumped Up", "Drained", "Stressed Out"];
@@ -8,7 +7,7 @@ $(document).ready(function() {
 		$("#gif-space").empty();
 		var emotion = $(this).attr("data-name");
 		//code that will add a random offset number to the url so that different gifs are displayed after each click to the same button.
-		var randomOffsetNum = Math.floor((Math.random() * 100));
+		var randomOffsetNum = Math.floor((Math.random() * 101));
 		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         emotion + "&api_key=dc6zaTOxFJmzC&limit=10&offset=" + randomOffsetNum;
         //making the Ajax call
@@ -42,7 +41,7 @@ $(document).ready(function() {
 		        gifDiv.addClass("gifDiv");
 		        // Prepending the gifDiv to the HTML page in the "#gif-space" div
 		        $("#gif-space").prepend(gifDiv);
-		        //calling the animate function to change to state of the gif when clicked. The on click event was firing off for every other gif, so I did some research and found the off click solution. Don't know why it works, but it works :D
+		        //calling the animate function to change to state of the gif when clicked. The on click event was firing off for every other gif, so I did some research and came up with the off click solution.
 		        $("img").off("click", animate);
 		        $("img").on("click", animate);
 			}
@@ -69,7 +68,7 @@ $(document).ready(function() {
         renderButtons();
 	});
 	
-	 //function that will change animate the gifs when clicked
+	 //function that will animate the gifs when clicked, and vice versa
 	function animate() {
 		var state = $(this).attr("data-state");
 		if (state === "still") {
